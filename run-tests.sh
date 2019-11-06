@@ -14,4 +14,4 @@ npm install
 npm run build
 npm install codeceptjs puppeteer --save
 npm i mocha-junit-reporter
-npx codeceptjs run --steps 
+npx codeceptjs run --steps  --reporter mocha-junit-reporter
