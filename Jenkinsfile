@@ -4,7 +4,7 @@ node {
     def dockerHome = tool 'nyDocker'
 
     stage("Initializing") {
-        cleanWs();
+        //cleanWs();
         checkout scm;
         sh 'git reset --hard'
         env.PATH = "${dockerHome}/bin:${env.PATH}"
