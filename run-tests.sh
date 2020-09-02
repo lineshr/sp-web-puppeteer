@@ -15,7 +15,7 @@
 #npm install codeceptjs puppeteer --save
 #npm i mocha-junit-reporter
 #npx codeceptjs run --steps 
-#!/usr/bin/env bash
+!/usr/bin/env bash
 
 VERSION=${1:-latest}
 
