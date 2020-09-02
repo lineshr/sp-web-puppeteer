@@ -10,7 +10,7 @@ RUN apt-get update --no-install-recommends -y && \
 
 COPY codecept.conf.js /app/
 COPY package.json /app/
-COPY test /app/tests
+COPY sp-web_innloggin_test.js /app/tests
 COPY run-tests.sh /app/docker/
 
 WORKDIR /app
