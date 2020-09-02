@@ -1,10 +1,10 @@
 FROM buildkite/puppeteer
 
 # Fix certificate issues
-RUN apt-get update --no-install-recommends && \
-    apt-get install ca-certificates-java && \
-    apt-get clean && \
-    update-ca-certificates -f;
+RUN apt-get update --no-install-recommends -y && \
+    apt-get install ca-certificates-java -y && \
+    apt-get clean -y && \
+    update-ca-certificates -f -y;
 
 COPY codecept.conf.js /app/
 COPY package.json /app/
