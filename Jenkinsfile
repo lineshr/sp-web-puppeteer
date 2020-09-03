@@ -35,7 +35,7 @@ node {
             echo "Pulling image ${VERSION}"	
             sh "mkdir report"
             
-            sh "docker run --rm -v "$(pwd)"/report/:/app/report/ \	lineshr/sp-web-puppeteer-test:${VERSION}"
+            sh "docker run --rm -v "$(pwd)"/report/:/app/report/ lineshr/sp-web-puppeteer-test:${VERSION}"
                        
             println "done."
             
