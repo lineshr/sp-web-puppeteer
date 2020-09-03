@@ -14,7 +14,7 @@ node {
         sh "docker build -t ${imageTag} -f docker/Dockerfile ."
     }
 
-    stage("Running Tests CodeceptJS") {
+    stages("Running Tests CodeceptJS") {
         stage("Env Variables") {
             steps {
                 echo "The build number is ${env.BUILD_NUMBER}"
