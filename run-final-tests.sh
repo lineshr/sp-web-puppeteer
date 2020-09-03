@@ -1,10 +1,11 @@
-
-
-
 #!/bin/bash
+
+
+echo "first stage"
 
 VERSION=${1:-latest}
 
+echo "second stage"
 echo "Pulling image ${VERSION}"
 mkdir report
 
