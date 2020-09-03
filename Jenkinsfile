@@ -14,7 +14,7 @@ node {
         sh "docker build -t ${imageTag} -f docker/Dockerfile ."
     }
 
-    stage("Running Tests") {
+    stage("Running Tests CodeceptJS") {
         try {
             sh "run-final-tests.sh ${env.BUILD_NUMBER}"
         }
