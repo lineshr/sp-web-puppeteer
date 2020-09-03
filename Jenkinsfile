@@ -32,10 +32,10 @@ node {
             //sh '"run-final-tests.sh $BUILD_NUMBER"'
             
             echo "second stage"	
-            echo "Pulling image ${VERSION}"	
+            echo "Pulling image ${BUILD_NUMBER}"	
             sh "mkdir report"
             
-            sh "docker run --rm -v "$(pwd)"/report/:/app/report/ lineshr/sp-web-puppeteer-test:${VERSION}"
+            sh "docker run --rm -v "$(pwd)"/report/:/app/report/ lineshr/sp-web-puppeteer-test:${BUILD_NUMBER}"
                        
             println "done."
             
