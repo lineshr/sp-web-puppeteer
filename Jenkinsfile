@@ -21,7 +21,7 @@ node {
             println "done."
         }
         finally {
-            sh "ls report/"
+          //  sh "ls report/"
             allure includeProperties: false, jdk: '', results: [[path: 'report']]
         }
     }
