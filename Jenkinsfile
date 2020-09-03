@@ -16,7 +16,7 @@ node {
 
     stage("Running Tests") {
         try {
-            sh "run-tests.sh ${env.BUILD_NUMBER}"
+            sh "run-final-tests.sh ${env.BUILD_NUMBER}"
         }
         finally {
          //   sh "ls report/"
