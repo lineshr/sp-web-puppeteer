@@ -4,7 +4,7 @@ node {
     def dockerHome = tool 'nyDocker'
 
     stage("Initializing") {
-        //cleanWs();
+        cleanWs();
         checkout scm;
         sh 'git reset --hard'
         env.PATH = "${dockerHome}/bin:${env.PATH}"
@@ -16,10 +16,11 @@ node {
 
     stage("Running Tests CodeceptJS") {
         try {
-            sh "./run-final-tests.sh ${env.BUILD_NUMBER}"
+            
+            sh "run-final-tests.sh ${env.BUILD_NUMBER}"
         }
         finally {
-         //   sh "ls report/"
+            sh "ls report/"
             allure includeProperties: false, jdk: '', results: [[path: 'report']]
         }
     }
