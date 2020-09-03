@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 VERSION=${1:-latest}
 
