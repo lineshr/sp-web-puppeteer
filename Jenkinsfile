@@ -16,8 +16,9 @@ node {
 
     stage("Running Tests CodeceptJS") {
         try {
-            
+            println "started."
             sh "run-final-tests.sh ${env.BUILD_NUMBER}"
+            println "done."
         }
         finally {
             sh "ls report/"
