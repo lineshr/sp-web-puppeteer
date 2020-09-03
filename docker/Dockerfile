@@ -11,7 +11,7 @@ RUN apt-get update --no-install-recommends -y && \
 COPY codecept.conf.js /app/
 COPY package.json /app/
 COPY sp-web_innloggin_test.js /app/tests
-COPY docker/run-tests.sh /app/docker/
+COPY docker/run-tests.sh /usr/src/app/docker/
 
 WORKDIR /app
 RUN npm install
