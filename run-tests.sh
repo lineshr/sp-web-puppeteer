@@ -12,5 +12,6 @@ mkdir -p output
 #install npm og andre avhenginger
 npm install
 npm run build
-npm install codeceptjs puppeteer mocha-multi randomstring --save-dev
-npx codeceptjs run  --reporter mocha-multi
+npm install codeceptjs puppeteer mocha-multi randomstring allure-commandline  --save-dev
+#npx codeceptjs run  --reporter mocha-multi
+npx codeceptjs run  --plugins allure
