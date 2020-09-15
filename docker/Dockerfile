@@ -14,7 +14,8 @@ COPY src/tests /usr/src/app/tests
 COPY src/tests /usr/src/app/tests
 COPY docker/run-tests.sh /usr/src/app/docker/
 
-WORKDIR /app
+WORKDIR /usr/src/app
+RUN rm -rf node_modules package-lock.json
 RUN npm install
 
 ONBUILD ADD . /app
