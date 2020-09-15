@@ -12,5 +12,6 @@ docker run --rm \
 
 status=$?
 
+
 echo "Final status ${status}"
 exit ${status}
