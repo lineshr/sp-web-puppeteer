@@ -10,8 +10,8 @@ RUN apt-get update --no-install-recommends -y && \
 
 COPY codecept.conf.js /app/
 COPY package.json /app/
-COPY tests /app/tests
-COPY tests /app/tests
+COPY src/tests /app/tests
+COPY src/tests /app/tests
 COPY docker/run-tests.sh /usr/src/app/docker/
 
 WORKDIR /app
