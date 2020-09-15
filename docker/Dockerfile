@@ -9,9 +9,9 @@ RUN apt-get update --no-install-recommends -y && \
     update-ca-certificates -f -y;
 
 COPY codecept.conf.js /app/
-COPY package.json /app/
-COPY src/tests /app/tests
-COPY src/tests /app/tests
+COPY package.json /usr/src/app/
+COPY src/tests /usr/src/app/tests
+COPY src/tests /usr/src/app/tests
 COPY docker/run-tests.sh /usr/src/app/docker/
 
 WORKDIR /app
