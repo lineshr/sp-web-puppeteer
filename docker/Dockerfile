@@ -17,6 +17,7 @@ COPY docker/run-tests.sh /usr/src/app/docker/
 WORKDIR /usr/src/app
 RUN rm -rf node_modules package-lock.json
 RUN npm install
+RUN npm -v
 
 ONBUILD ADD . /app
 ONBUILD WORKDIR /app
