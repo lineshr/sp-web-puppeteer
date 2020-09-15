@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
 
-npm run load-test && npx codeceptjs run --steps
+
+
+cd $REPO_FOLDER
+mkdir -p output
+
+
+npm run tests && npx codeceptjs run --steps
 ls report
+
