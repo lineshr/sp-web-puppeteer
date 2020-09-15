@@ -1,6 +1,7 @@
 
 FROM buildkite/puppeteer:latest
 
+RUN mkdir -p /usr/share/man/man1
 # Fix certificate issues
 RUN apt-get update --no-install-recommends -y && \
     apt-get install ca-certificates-java -y && \
