@@ -1,7 +1,7 @@
 node {
 
-    def imageTag = "peterngtr/rest-demo:${env.BUILD_NUMBER}"
-    def dockerHome = tool 'myDocker'
+    def imageTag = "lineshr/sp-web-puppeteer-test:${env.BUILD_NUMBER}"
+    def dockerHome = tool 'nyDocker'
 
     stage("Initializing") {
         cleanWs();
