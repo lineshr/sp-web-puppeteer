@@ -1,5 +1,5 @@
 
-FROM peternguyentr/node-java-chrome:latest
+FROM buildkite/puppeteer:latest
 
 # Fix certificate issues
 RUN apt-get update --no-install-recommends -y && \
