@@ -7,5 +7,6 @@ mkdir -p output
 
 
 npm run tests && npx codeceptjs run --steps
-
+echo "testing"
+echo $?
 
