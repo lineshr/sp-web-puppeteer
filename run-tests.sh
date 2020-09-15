@@ -14,4 +14,4 @@ npm install
 npm run build
 npm install codeceptjs puppeteer mocha-multi randomstring allure-commandline  --save-dev
 #npx codeceptjs run  --reporter mocha-multi
-npx codeceptjs run  --plugins allure
+npx codeceptjs run  src/tests/sp-web_integration_client_test.js --plugins allure
