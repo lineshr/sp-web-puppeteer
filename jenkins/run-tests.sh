@@ -8,7 +8,7 @@ mkdir report
 
 docker run --rm \
     -v "$(pwd)"/report/:/app/report/ \
-    peterngtr/rest-demo:${VERSION}
+    lineshr/sp-web-puppeteer-test:${VERSION}
 
 status=$?
 
