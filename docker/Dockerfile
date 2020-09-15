@@ -2,16 +2,16 @@
 FROM peternguyentr/node-java-chrome:latest
 
 # Fix certificate issues
-RUN apt-get update --no-install-recommends && \
-    apt-get install ca-certificates-java && \
-    apt-get clean && \
-    update-ca-certificates -f;
+RUN apt-get update --no-install-recommends -y && \
+    apt-get install ca-certificates-java -y && \
+    apt-get clean -y && \
+    update-ca-certificates -f -y;
 
 COPY codecept.conf.js /app/
 COPY package.json /app/
 COPY tests /app/tests
 COPY tests /app/tests
-COPY docker/run-tests.sh /app/docker/
+COPY docker/run-tests.sh /usr/src/app/docker/
 
 WORKDIR /app
 RUN npm install
